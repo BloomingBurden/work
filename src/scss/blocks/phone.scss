@@ -1,0 +1,92 @@
+.phone {
+  position: relative;
+  flex: 0 0 253px;
+  display: flex;
+
+  @media (max-width: $tableW) {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+}
+
+.phone__link {
+  position: relative;
+  display: block;
+
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 39px;
+  color: #213B72;
+  text-transform: uppercase;
+  transition: $trans;
+
+  &:hover,
+  &:focus {
+    color: lighten(#213B72, 20%);
+  }
+
+  @media (max-width: $desktopW) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  @media (max-width: $tableW) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.phone__inner {
+  text-align: center;
+
+  @media (max-width: $tableW) {
+    transition: $trans;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    right: 60px;
+    top: 0;
+    z-index: 9;
+    background-color: #ffffff;
+  }
+}
+
+.phone__icon {
+  cursor: pointer;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #213B72;
+  border-radius: 50%;
+  transition: $trans;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(#213B72, 20%);
+  }
+
+  img {
+    flex: 0 0 20px;
+    height: 20px;
+  }
+}
+
+.phone__time {
+  display: block;
+
+  @media (max-width: $tableW) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $tableW) {
+  .phone--active .phone__inner {
+    opacity: 1;
+    visibility: visible;
+    user-select: auto;
+  }
+}

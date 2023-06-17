@@ -1,0 +1,40 @@
+.nav {
+  flex: 1 1 auto;
+  max-width: 555px;
+
+  @media (max-width: $tableW) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  margin-right: 12.25%;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $desktopW) {
+    margin-right: 7%;
+  }
+}
+
+.nav__link {
+  display: block;
+  line-height: 22px;
+  transition: $trans;
+
+  &:focus,
+  &:hover {
+    color: $accent;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

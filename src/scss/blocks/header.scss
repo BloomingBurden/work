@@ -1,0 +1,33 @@
+.header__container {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 12.5%;
+
+  @media (max-width: $desktopW) {
+    margin-right: 7%;
+  }
+}
+
+.logo {
+  flex: 0 0 135px;
+  width: 135px;
+  height: 87px;
+
+  @media (max-width: $tableW) {
+    flex: 0 0 115px;
+    height: 73px;
+  }
+}
+
+.header__nav {
+  margin-right: 10px;
+}
+
+.header__phone {
+  margin-left: auto;
+}
+
