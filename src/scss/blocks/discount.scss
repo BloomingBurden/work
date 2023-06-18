@@ -1,0 +1,143 @@
+.discount {
+  color: #ffffff;
+  padding: 48px 0 90px;
+
+  @media (max-width: $tableW) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.discount__inner {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(101.45deg, #2E5CBD 9.23%, #4E72BF 50.97%, #5876B6 84.12%), #5876B6;
+  border-top-right-radius: 150px;
+
+  @media (max-width: $tableW) {
+    border-radius: 0;
+    margin: 0 -20px;
+    min-height: 760px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -48px;
+    width: 37.5%;
+    height: calc(100% + 48px);
+    left: 60px;
+    background-image: url('@img/gift-bg.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (max-width: $desktopW) {
+      width: 100%;
+    }
+
+    @media (max-width: $tableW) {
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      top: 0;
+
+      background-size: 313px 374px;
+      background-position: center bottom;
+    }
+  }
+}
+
+.discount__content {
+  margin-left: auto;
+  width: 670px;
+  padding: 70px 80px 113px 0;
+
+  @media (max-width: $tableW) {
+    margin-left: 0;
+    width: 100%;
+    padding: 64px 20px 0 20px;
+  }
+}
+
+.discount__title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-weight: 600;
+  font-size: 50px;
+  letter-spacing: 0.01em;
+  line-height: 60px;
+
+  strong {
+    font-weight: 700;
+  }
+
+  @media (max-width: $tableW) {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  span {
+    display: block;
+    padding-left: 50px;
+    
+    @media (max-width: $tableW) {
+      padding-left: 25px;
+    }
+  }
+}
+
+.discount__text {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 500;
+
+  @media (max-width: $tableW) {
+    font-size: 18px;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 0 30px;
+  }
+}
+
+.discount__form {
+  position: relative;
+
+  input {
+    width: 70%;
+    border-radius: 90px;
+    padding: 24px 200px 24px 30px;
+    background-color: #ffffff;
+    border: none;
+
+    @media (max-width: $tableW) {
+      padding: 18px 85px 18px 30px;
+    }
+    
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.45;
+      color: #ABABAB;
+
+      @media (max-width: $tableW) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 125px;
+    z-index: 1;
+
+    @media (max-width: $tableW) {
+      min-width: 185px;
+      right: 0;
+    }
+  }
+}

@@ -26,7 +26,29 @@ const openPhone = () => {
 
         mainPhone.classList.remove('phone--active');
     })
-}
+};
+
+const playVideo = () => {
+    const buttons = document.querySelectorAll('.service__play');
+
+    buttons.forEach(item => item.addEventListener('click', (evt) => {
+        const target = item.closest('.service__video').querySelector('video');
+
+        if (!target) return;
+
+        target.play();
+        item.classList.add('service__play--closed');
+
+        target.addEventListener('click', () => {
+            if (target.played) {
+                target.pause();
+                target.load();
+                item.classList.remove('service__play--closed');
+            }
+        });
+    }));
+};
 
 isWebp();
 openPhone();
+playVideo();

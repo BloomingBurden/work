@@ -78,3 +78,87 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.title {
+  margin: 0;
+  
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 0.01em;
+
+  @media (max-width: $desktopW) {
+    font-size: calcFluidFontSize(50, 30, 1200, 390);
+  }
+
+  @media (max-width: $tableW) {
+    line-height: 1.1;
+  }
+}
+
+.button {
+  cursor: pointer;;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 20px 40px;
+  background-color: $semidark;
+  border-radius: 106px;
+  transition: $trans;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($semidark, 10%);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media (max-width: $tableW) {
+    font-size: 16px;
+    padding: 17px 25px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  transition: $trans;
+  border-radius: 50%;
+  border: 1px solid transparent;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  
+  @media (max-width: $tableW) {
+    width: 36px;
+    height: 36px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  background-image: url('@img/icons/icons.svg#arrow-white-icon');
+  background-color: $semidark;
+
+  &:hover,
+  &:focus {
+    border-color: #ffffff;
+  }
+}
+
+.swiper-button-prev {
+  background-image: url('@img/icons/icons.svg#arrow-icon');
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-color: $semidark;
+  }
+}

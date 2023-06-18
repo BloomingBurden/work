@@ -4,7 +4,431 @@
 })
 
 <main>
-  
+  <section class="preview">
+    <div class="preview__container container">
+      <h1 class="visually-hidden">Grushka - Сеть салонов красоты</h1>
+      <div class="preview__inner">
+        <h2 class="preview__title">Красота начинается с заботы о себе</h2>
+        <p class="preview__discount">50% скидка</p>
+        <strong class="preview__subtitle">чистку + пилинг и биоревитализацию</strong>
+        <a href="#" class="preview__btn button">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages">
+    <div class="advantages__container container">
+      <h2 class="advantages__title title">Преимущества клиники</h2>
+
+      <div class="advantages__body">
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-1-icon" alt="Изображение преимущества" width="70">
+          </div>
+          <h3 class="advantages__subtitle">Врачи экспертного уровня</h3>
+          <p class="advantages__text">Наши врачи - квалифицированные специалисты с большим стажем работы</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-2-icon" alt="Изображение преимущества" width="70">
+          </div>
+          <h3 class="advantages__subtitle">Видимый результат</h3>
+          <p class="advantages__text">Вы заметите улучшения уже после первого посещения</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-3-icon" alt="Изображение преимущества" width="65" height="55">
+          </div>
+          <h3 class="advantages__subtitle">Оригинальное оборудование</h3>
+          <p class="advantages__text">Мы используем лучшее оборудование из США, Израиля и Канады</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-4-icon" alt="Изображение преимущества" width="68" height="59">
+          </div>
+          <h3 class="advantages__subtitle">Система лояльности</h3>
+          <p class="advantages__text">Бонусная программа для наших постоянных клиентов</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-5-icon" alt="Изображение преимущества" width="72" height="63">
+          </div>
+          <h3 class="advantages__subtitle">Работаем с 2010 г</h3>
+          <p class="advantages__text">Клиника Bestbody успешно работает с 2010 года</p>
+        </div>
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="@img/icons/icons.svg#advantages-6-icon" alt="Изображение преимущества" width="70">
+          </div>
+          <h3 class="advantages__subtitle">Удобное расположение</h3>
+          <p class="advantages__text">Наша клиника находится в центре Москвы с удобным паркингом</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="result__container container">
+      <h2 class="result__title title">Видимый результат</h2>
+
+      <div class="result__swiper swiper">
+        <div class="result__list swiper-wrapper">
+          <div class="result__slide swiper-slide">
+            <div class="result__inner">
+              <div class="result__img">
+                <picture>
+                  <source type="image/webp" srcset="@img/results/result_3.webp">
+                  <img src="@img/results/result_3.jpg" alt="Изображение результата">
+                </picture>
+              </div>
+              <div class="result__text">
+                <span class="result__before">До</span>
+                <span class="result__after">После</span>
+              </div>
+            </div>
+          </div>
+          <div class="result__slide swiper-slide">
+            <div class="result__inner">
+              <div class="result__img">
+                <picture>
+                  <source type="image/webp" srcset="@img/results/result_1.webp">
+                  <img src="@img/results/result_1.jpg" alt="Изображение результата">
+                </picture>
+              </div>
+              <div class="result__text">
+                <span class="result__before">До</span>
+                <span class="result__after">После</span>
+              </div>
+            </div>
+          </div>
+          <div class="result__slide swiper-slide">
+            <div class="result__inner">
+              <div class="result__img">
+                <picture>
+                  <source type="image/webp" srcset="@img/results/result_2.webp">
+                  <img src="@img/results/result_2.jpg" alt="Изображение результата">
+                </picture>
+              </div>
+              <div class="result__text">
+                <span class="result__before">До</span>
+                <span class="result__after">После</span>
+              </div>
+            </div>
+          </div>
+          <div class="result__slide swiper-slide">
+            <div class="result__inner">
+              <div class="result__img">
+                <picture>
+                  <source type="image/webp" srcset="@img/results/result_4.webp">
+                  <img src="@img/results/result_4.jpg" alt="Изображение результата">
+                </picture>
+              </div>
+              <div class="result__text">
+                <span class="result__before">До</span>
+                <span class="result__after">После</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev result__btn--prev"></div>
+        <div class="swiper-button-next result__btn--next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services__container container">
+      <h2 class="services__title title">Наши услуги</h2>
+      
+      <article class="services__item service">
+        <div class="service__header">
+          <h3 class="service__subtitle service__subtitle-m">Чистка + пилинг лица</h3>
+          <div class="service__video">
+            <video src="./video/clear.mp4" playsinline="" loop="" poster="@img/services/services-bg.jpg"></video>
+            <button type="button" class="service__play">Запустить видео</button>
+          </div>
+          <div class="service__content">
+            <h3 class="service__subtitle">Чистка + пилинг лица</h3>
+            <p class="service__text">Главная задача чистки лица — вернуть коже здоровый вид. Это произойдёт после того, как будет восстановлено дыхание кожи, она освободится от жира и грязи, отмерших клеток</p>
+            <p class="service__text">Чистка помогает избавиться от излишков кожного жира, загрязнений и ороговевших клеток. Пилинг же удаляет остатки мёртвых клеток, стимулирует обновление кожи и улучшает цвет лица.</p>
+            <button class="service__button button">Оставить заявку</button>
+          </div>
+        </div>
+
+        <div class="service__step">
+          <h3 class="service__caption">Этапы процедуры</h3>
+          <ul class="service__list">
+            <li class="service__item service__item--blue">
+              <div class="service__icon">
+                <img src="@img/step/step-1.svg" alt="Изображение процедуры" width="71" height="71">
+              </div>
+              <h3 class="service__preview">Очищение и подготовка кожи</h3>
+              <p class="service__descr">Очищающее средство наносится на влажную кожу, затем смывается. Кожа разогревается и стимулируется</p>
+            </li>
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-2.svg" alt="Изображение процедуры" width="52" height="58">
+              </div>
+              <h3 class="service__preview">Пилинг</h3>
+              <p class="service__descr">Цель пилинга разрыхлить поверхностные слои эпидермиса благодаря чему облегчится этап глубокого очищения пор.</p>
+            </li>
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-3.svg" alt="Изображение процедуры" width="76" height="56">
+              </div>
+              <h3 class="service__preview">Глубокая ручная чистка</h3>
+              <p class="service__descr">Аккуратно производится эвакуация содержимого пор, очищаются протоки сальных желез, удаляются открытые и закрытые комедоны</p>
+            </li>
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-4.svg" alt="Изображение процедуры" width="71" height="46">
+              </div>
+              <h3 class="service__preview">Сужение пор и увлажнение кожи</h3>
+              <p class="service__descr">Кожа обрабатывается обеззараживающим средством, нанесение финишной маски</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="services__item service service--right">
+        <div class="service__header">
+          <h3 class="service__subtitle service__subtitle-m">Биоревитализация лица</h3>
+          <div class="service__video">
+            <video src="./video/bio.mp4" playsinline="" loop="" poster="@img/services/services-bg-2.jpg"></video>
+            <button type="button" class="service__play">Запустить видео</button>
+          </div>
+          <div class="service__content">
+            <h3 class="service__subtitle">Биоревитализация лица</h3>
+            <p class="service__text">Биоревитализация лица — это процедура, которая заключается во введении в кожу специальных препаратов на основе гиалуроновой кислоты. Эти препараты помогают увлажнить кожу, стимулируют её обновление и улучшают цвет лица.</p>
+            <p class="service__text">После процедуры вы заметите значительное улучшение состояния кожи: она станет более упругой, гладкой и свежей. Кроме того, такой уход помогает бороться с мелкими морщинками, пигментацией и другими проблемами кожи.</p>
+            <button class="service__button button">Оставить заявку</button>
+          </div>
+        </div>
+
+        <div class="service__step">
+          <h3 class="service__caption">Этапы процедуры</h3>
+          <ul class="service__list">
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-1.svg" alt="Изображение процедуры" width="71" height="71">
+              </div>
+              <h3 class="service__preview">Снятие макияжа и очищение</h3>
+              <p class="service__descr">Очищающее средство наносится на влажную кожу, затем смывается. Кожа разогревается и стимулируется</p>
+            </li>
+            <li class="service__item service__item--blue">
+              <div class="service__icon">
+                <img src="@img/step/step-5.svg" alt="Изображение процедуры" width="57" height="81">
+              </div>
+              <h3 class="service__preview">Обработка и разметка зоны</h3>
+              <p class="service__descr">Кожа обрабатывается антисептиком и отмечаются точки введения препарата.</p>
+            </li>
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-6.svg" alt="Изображение процедуры" width="64" height="63">
+              </div>
+              <h3 class="service__preview">Введение препарата под кожу</h3>
+              <p class="service__descr">Используя тонкую иглу, специалист вводит препарат на основе гиалуроновой кислоты в проблемные места</p>
+            </li>
+            <li class="service__item">
+              <div class="service__icon">
+                <img src="@img/step/step-7.svg" alt="Изображение процедуры" width="71" height="72">
+              </div>
+              <h3 class="service__preview">Обеззараживание кожи</h3>
+              <p class="service__descr">После проведения процедуры кожу дезинфицируют и обрабатывают антисептическими средствами</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <article class="discount" id="discount">
+    <div class="discount__container container">
+      <div class="discount__inner">
+        <div class="discount__content">
+          <h2 class="discount__title">Дарим <strong>скидку 50%</strong><span>на первое посещение</span></h2>
+          <p class="discount__text">Оставьте свой номер телефона - и мы перезвоним Вам!</p>
+          <form class="discount__form" action="" mathod="POST">
+            <input type="tel" placeholder="Телефон" name="phone" required>
+            <button type="submit" class="button">Получить скидку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="reviews" id="reviews">
+    <div class="reviews__container container">
+      <div class="reviews__header">
+        <h2 class="reviews__title title">Отзывы клиентов</h2>
+        <div class="reviews__rating">
+          <div class="reviews__rating-item reviews__rating--gis">
+            <img src="@img/svg/gis.svg" alt="Изображение гис" width="67">
+            <span class="rating__num">4,9</span>
+          </div>
+          <div class="reviews__rating-item reviews__rating--yandex">
+            <img src="@img/svg/yandex.svg" alt="Изображение яндекс" width="67">
+            <span class="rating__num">4,9</span>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__slider swiper">
+        <div class="reviews__list swiper-wrapper">
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-1.webp">
+              <img src="@img/reviews/reviews-1" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-2.webp">
+              <img src="@img/reviews/reviews-2" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-3.webp">
+              <img src="@img/reviews/reviews-3" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-4.webp">
+              <img src="@img/reviews/reviews-4" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-5.webp">
+              <img src="@img/reviews/reviews-5" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-6.webp">
+              <img src="@img/reviews/reviews-6" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-7.webp">
+              <img src="@img/reviews/reviews-7" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-8.webp">
+              <img src="@img/reviews/reviews-8" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-9.webp">
+              <img src="@img/reviews/reviews-9" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-10.webp">
+              <img src="@img/reviews/reviews-10" alt="Отзыв">
+            </picture>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/reviews/reviews-11.webp">
+              <img src="@img/reviews/reviews-11" alt="Отзыв">
+            </picture>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev reviews__btn--prev"></div>
+        <div class="swiper-button-next reviews__btn--next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="masters" id="masters">
+    <div class="masters__container container">
+      <h2 class="masters__title title">Наши мастера</h2>
+
+      <div class="masters__swiper swiper">
+        <div class="masters__list swiper-wrapper">
+          <div class="masters__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/masters/master-1.webp">
+              <img src="@img/masters/master-1.jpg" alt="Фото мастера">
+            </picture>
+          </div>
+          <div class="masters__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/masters/master-2.webp">
+              <img src="@img/masters/master-2.jpg" alt="Фото мастера">
+            </picture>
+          </div>
+          <div class="masters__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/masters/master-3.webp">
+              <img src="@img/masters/master-3.jpg" alt="Фото мастера">
+            </picture>
+          </div>
+          <div class="masters__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="@img/masters/master-1.webp">
+              <img src="@img/masters/master-1.jpg" alt="Фото мастера">
+            </picture>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev masters__btn--prev"></div>
+        <div class="swiper-button-next masters__btn--next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sign" id="sign">
+    <div class="sign__container container">
+      <div class="sign__inner">
+        <h2 class="sign__title title">Оставить заявку</h2>
+        <p class="sign__subtitle">Заполните форму и наш менеджер свяжется с вами в течении 5 минут</p>
+        
+        <form class="sign__form" action="" method="POST">
+          <input class="sign__item sign-name" type="text" name="name" placeholder="Имя" required>
+          <input class="sign__item sign-phone" type="tel" name="phone" placeholder="Телефон" required>
+          <p class="policy">Нажимая на кнопку, вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></p>
+          <button class="sign__send button" type="submit">Записаться сейчас</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
+
+<article class="discount-popup popup-item discount-popup--closed">
+  <a href="@img/discount.png" target="_blank">
+    <div class="discount-popup__img">
+      <img src="@img/svg/procent.svg" alt="Иконка скидки" width="125">
+    </div>
+    <h2>Скидка на первый визит</h2>
+  </a>
+</article>
+
+<article class="gift-popup popup-item gift-popup--closed">
+  <a href="#">
+    <div class="gift-popup__img">
+      <img src="@img/svg/gift.svg" alt="Иконка подарка" width="91">
+    </div>
+    <h2>Забрать гарантированный подарок</h2>
+  </a>
+</article>
+
+<article class="call-popup">
+  <a href="#">
+    <h2>Написать в WhatsApp</h2>
+    <div class="call-popup__img">
+      <img src="@img/what.svg" alt="Иконка подарка" width="90">
+    </div>
+  </a>
+</article>
+
 
 @@include('html/footer.html', {})

@@ -1,0 +1,27 @@
+.services {
+  padding: 204px 0 130px;
+
+  @media (max-width: $tableW) {
+    padding: 45px 0 80px;
+  }
+}
+
+.services__title {
+  margin-bottom: 80px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 40px;
+  }
+}
+
+.services__item {
+  margin-bottom: 110px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 50px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
