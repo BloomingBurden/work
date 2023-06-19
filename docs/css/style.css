@@ -2418,11 +2418,18 @@ button {
 
   .discount-popup {
     left: 20px;
-    bottom: 150px;
+  }
+
+  .discount-popup:hover {
+    -webkit-box-shadow: 0 6px 0 #E2309B;
+            box-shadow: 0 6px 0 #E2309B;
   }
 
   .discount-popup h2 {
-    display: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10px;
+    line-height: 1;
   }
 
   .discount-popup--closed {
@@ -2430,8 +2437,8 @@ button {
   }
 
   .popup-item {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     padding: 0;
   }
 
@@ -2450,12 +2457,18 @@ button {
     bottom: 55px;
   }
 
+  .gift-popup:hover {
+    -webkit-box-shadow: 0 6px 0 #5112AF;
+            box-shadow: 0 6px 0 #5112AF;
+  }
+
   .gift-popup h2 {
-    display: none;
+    font-size: 9px;
+    line-height: 1;
   }
 
   .gift-popup__img {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
 
   .call-popup {
