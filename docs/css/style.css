@@ -1530,7 +1530,7 @@ button {
 }
 
 .discount-popup--closed {
-  bottom: 150px;
+  bottom: 25px;
 }
 
 .popup-item {
