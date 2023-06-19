@@ -7,6 +7,7 @@
 
   @media (max-width: $tableW) {
     left: 20px;
+    bottom: 170px;
   }
 
   &:hover {
@@ -32,14 +33,6 @@
       font-size: 10px;
       line-height: 1;
     }
-  }
-}
-
-.discount-popup--closed {
-  bottom: 25px;
-
-  @media (max-width: $tableW) {
-    bottom: 60px;
   }
 }
 
@@ -95,7 +88,7 @@
 
   @media (max-width: $tableW) {
     left: 20px;
-    bottom: 55px;
+    bottom: 65px;
   }
 
   &:hover {
@@ -123,12 +116,6 @@
   }
 }
 
-.gift-popup--closed {
-  bottom: -100%;
-  visibility: hidden;
-  user-select: none;
-}
-
 .gift-popup__img {
   width: 34px;
   margin-bottom: 15px;
@@ -146,7 +133,7 @@
 
   @media (max-width: $tableW) {
     right: 30px;
-    bottom: 55px;
+    bottom: 60px;
   }
 
   a {
@@ -265,10 +252,11 @@
   }
 
   a {
+    text-align: center;
     flex: 1 1 50%;
-    padding: 14px 25px;
+    padding: 10px 25px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     color: #ffffff;
     transition: $trans;

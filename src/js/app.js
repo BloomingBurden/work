@@ -54,11 +54,9 @@ const swiper3 = new Swiper('.masters__swiper', {
   
 
 window.addEventListener('load', (evt) => {
-    const popup = document.querySelector('.gift-popup');
-    const popupTwo = document.querySelector('.discount-popup');
+    const popup = document.querySelector('.popup');
 
     setTimeout(() => {
-        popup.classList.remove('gift-popup--closed');
-        popupTwo.classList.remove('discount-popup--closed');
+        popup.classList.remove('popup--closed');
     }, 10000)
 });
