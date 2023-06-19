@@ -74,6 +74,9 @@
 }
 
 .service__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex: 1 1 auto;
   padding-left: 90px;
   padding-top: 8px;
@@ -84,6 +87,7 @@
   }
 
   @media (max-width: $tableW) {
+    align-items: center;
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
@@ -126,10 +130,7 @@
 }
 
 .service__button {
-  @media (max-width: $tableW) {
-    display: block;
-    margin: 0 auto;
-  }
+
 }
 
 .service__caption {

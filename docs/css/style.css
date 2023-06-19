@@ -1021,6 +1021,16 @@ button {
 }
 
 .service__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1160,6 +1170,7 @@ button {
   z-index: 0;
   background: linear-gradient(101.45deg, #2E5CBD 9.23%, #4E72BF 50.97%, #5876B6 84.12%), #5876B6;
   border-top-right-radius: 150px;
+  overflow: hidden;
 }
 
 .no-webp .discount__inner::after {
@@ -1213,6 +1224,7 @@ button {
 }
 
 .discount__form input {
+  min-height: 68px;
   width: 70%;
   border-radius: 90px;
   padding: 24px 200px 24px 30px;
@@ -1251,6 +1263,7 @@ button {
 }
 
 .discount__form button {
+  min-height: 68px;
   position: absolute;
   top: 0;
   right: 125px;
@@ -1490,17 +1503,18 @@ button {
 }
 
 .discount-popup {
-  bottom: 215px;
-  left: 64px;
+  padding-top: 10px;
+  bottom: 160px;
+  left: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#D6238D), color-stop(96.67%, #F1B2D7));
   background: linear-gradient(180deg, #D6238D 0%, #F1B2D7 96.67%);
-  -webkit-box-shadow: 0 7px 0 #E2309B;
-          box-shadow: 0 7px 0 #E2309B;
+  -webkit-box-shadow: 0 4px 0 #E2309B;
+          box-shadow: 0 4px 0 #E2309B;
 }
 
 .discount-popup:hover {
-  -webkit-box-shadow: 0 10px 0 #E2309B;
-          box-shadow: 0 10px 0 #E2309B;
+  -webkit-box-shadow: 0 7px 0 #E2309B;
+          box-shadow: 0 7px 0 #E2309B;
   -webkit-transform: scale(1.02);
       -ms-transform: scale(1.02);
           transform: scale(1.02);
@@ -1508,9 +1522,10 @@ button {
 
 .discount-popup h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 20px;
   text-align: center;
+  font-weight: 400;
   font-family: Arial, sans-serif;
 }
 
@@ -1519,12 +1534,14 @@ button {
 }
 
 .popup-item {
+  padding-left: 15px;
+  padding-right: 15px;
   overflow: hidden;
   position: fixed;
   z-index: 999;
-  width: 150px;
-  height: 150px;
-  border-radius: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
   color: #ffffff;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
@@ -1546,34 +1563,36 @@ button {
 }
 
 .discount-popup__img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
 }
 
 .gift-popup {
-  padding-top: 20px;
-  bottom: 50px;
-  left: 64px;
+  padding-top: 15px;
+  bottom: 20px;
+  left: 20px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1.51%, #A572F1), color-stop(96.67%, #732DDA));
   background: linear-gradient(180deg, #A572F1 1.51%, #732DDA 96.67%);
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
-  -webkit-box-shadow: 0 7px 0 #5112AF;
-          box-shadow: 0 7px 0 #5112AF;
+  -webkit-box-shadow: 0 4px 0 #5112AF;
+          box-shadow: 0 4px 0 #5112AF;
 }
 
 .gift-popup:hover {
-  -webkit-box-shadow: 0 10px 0 #5112AF;
-          box-shadow: 0 10px 0 #5112AF;
+  -webkit-box-shadow: 0 7px 0 #5112AF;
+          box-shadow: 0 7px 0 #5112AF;
   -webkit-transform: scale(1.02);
       -ms-transform: scale(1.02);
           transform: scale(1.02);
 }
 
 .gift-popup h2 {
+  word-break: normal;
   margin: 0;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 11px;
+  line-height: 15px;
   text-align: center;
   font-family: Arial, sans-serif;
   font-weight: 700;
@@ -1589,8 +1608,8 @@ button {
 }
 
 .gift-popup__img {
-  width: 50px;
-  margin-bottom: 10px;
+  width: 34px;
+  margin-bottom: 15px;
 }
 
 .call-popup {
@@ -1611,21 +1630,27 @@ button {
           align-items: center;
 }
 
+.call-popup a:hover h2 {
+  color: #5876B6;
+}
+
 .call-popup h2 {
   margin: 0;
-  margin-right: 20px;
-  padding: 30px;
+  margin-right: 10px;
+  padding: 20px;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
   background: rgba(0, 0, 0, 0.65);
   border-radius: 18px;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
   color: #FFFFFF;
 }
 
 .call-popup__img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
 .footer {
@@ -2006,6 +2031,9 @@ button {
   }
 
   .service__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
@@ -2021,11 +2049,6 @@ button {
 
   .service__text:last-of-type {
     margin-bottom: 50px;
-  }
-
-  .service__button {
-    display: block;
-    margin: 0 auto;
   }
 
   .service__item {
@@ -2122,6 +2145,7 @@ button {
   }
 
   .discount__form input {
+    min-height: 56px;
     width: 100%;
     padding: 18px 85px 18px 30px;
   }
@@ -2147,6 +2171,7 @@ button {
   }
 
   .discount__form button {
+    min-height: 56px;
     min-width: 185px;
     right: 0;
   }
@@ -2330,11 +2355,6 @@ button {
 
   .call-popup h2 {
     display: none;
-  }
-
-  .call-popup__img {
-    width: 60px;
-    height: 60px;
   }
 
   .footer {
