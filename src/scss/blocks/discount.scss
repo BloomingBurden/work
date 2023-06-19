@@ -115,6 +115,7 @@
     border: none;
 
     @media (max-width: $tableW) {
+      width: 100%;
       padding: 18px 85px 18px 30px;
     }
     

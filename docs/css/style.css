@@ -1972,11 +1972,6 @@ button {
     font-size: 26px;
   }
 
-  .result__btn--next,
-  .result__btn--prev {
-    top: 82%;
-  }
-
   .result__btn--next {
     left: calc(50% + 20px);
   }
@@ -2127,6 +2122,7 @@ button {
   }
 
   .discount__form input {
+    width: 100%;
     padding: 18px 85px 18px 30px;
   }
 
@@ -2424,6 +2420,11 @@ button {
 }
 
 @media (max-width: 480px) {
+  .result__btn--next,
+  .result__btn--prev {
+    top: 82%;
+  }
+
   .reviews__slide {
     height: 463px;
   }

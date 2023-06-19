@@ -86,7 +86,7 @@
   top: 88%;
   transform: translateX(-50%);
   
-  @media (max-width: $tableW) {
+  @media (max-width: 480px) {
     top: 82%;
   }
 
