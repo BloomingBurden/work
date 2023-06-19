@@ -49,6 +49,23 @@ const playVideo = () => {
     }));
 };
 
+const popupClick = () => {
+    const btn = document.querySelector('.discount-popup a');
+    const popup = document.querySelector('.popup');
+    const closeBtn = document.querySelector('.popup__close');
+
+    btn.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        popup.classList.remove('popup--closed');
+    });
+
+    closeBtn.addEventListener('click', (evt) => {
+        popup.classList.add('popup--closed');
+    })
+}
+
 isWebp();
 openPhone();
 playVideo();
+popupClick();

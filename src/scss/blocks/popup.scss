@@ -6,8 +6,8 @@
   box-shadow: 0 4px 0 #E2309B;
 
   @media (max-width: $tableW) {
-    left: 10px;
-    bottom: 80px;
+    left: 20px;
+    bottom: 150px;
   }
 
   &:hover {
@@ -30,10 +30,10 @@
 }
 
 .discount-popup--closed {
-  bottom: 60px;
+  bottom: 150px;
 
   @media (max-width: $tableW) {
-    bottom: 20px;
+    bottom: 60px;
   }
 }
 
@@ -42,7 +42,7 @@
   padding-right: 15px;
   overflow: hidden;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   width: 120px;
   height: 120px;
   border-radius: 15px;
@@ -50,15 +50,9 @@
   transition: $trans;
 
   @media (max-width: $tableW) {
-    width: auto;
-    height: auto;
-    background: transparent;
+    width: 80px;
+    height: 80px;
     padding: 0;
-    box-shadow: none;
-
-    &:hover {
-      box-shadow: none;
-    }
   }
 
   a {
@@ -67,6 +61,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: $tableW) {
+      justify-content: center;
+    }
   }
 }
 
@@ -74,11 +72,15 @@
   width: 50px;
   height: 50px;
   margin-bottom: 5px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 0;
+  }
 }
 
 .gift-popup {
   padding-top: 15px;
-  bottom: 20px;
+  bottom: 25px;
   left: 20px;
   background: linear-gradient(180deg, #A572F1 1.51%, #732DDA 96.67%);
   transition: $trans;
@@ -86,8 +88,8 @@
   box-shadow: 0 4px 0 #5112AF;
 
   @media (max-width: $tableW) {
-    left: 25px;
-    bottom: 10px;
+    left: 20px;
+    bottom: 55px;
   }
 
   &:hover {
@@ -119,17 +121,21 @@
 .gift-popup__img {
   width: 34px;
   margin-bottom: 15px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 0;
+  }
 }
 
 .call-popup {
-  z-index: 999;
+  z-index: 998;
   position: fixed;
   right: 50px;
   bottom: 40px;
 
   @media (max-width: $tableW) {
     right: 30px;
-    bottom: 40px;
+    bottom: 55px;
   }
 
   a {
@@ -165,4 +171,107 @@
 .call-popup__img {
   width: 60px;
   height: 60px;
+}
+
+.popup {
+  overflow: auto;
+  max-height: 100%;
+  border-radius: 30px;
+  transition: $trans;
+  opacity: 1;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $tableW) {
+    width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    right: 20px;
+    top: 20px;
+    font-size: 0;
+    background-color: transparent;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 50%;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    &::before {
+      top: 30px;
+      transform: rotate(45deg) translateX(-50%);
+    }
+
+    &::after {
+      top: 12px;
+      transform: rotate(-45deg) translateX(-50%);
+    }
+  }
+}
+
+.popup--closed {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  user-select: none;
+}
+
+.popup-bottom {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  @media (max-width: $tableW) {
+    display: flex;
+  }
+
+  a {
+    flex: 1 1 50%;
+    padding: 14px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    transition: $trans;
+    
+    &:hover {
+      color: $semidark;
+    }
+  }
+}
+
+.popup-bottom__sign {
+  background: linear-gradient(90.23deg, #D6238D 0%, #FF9BD6 100%);
+}
+
+.popup-bottom__call {
+  background: linear-gradient(90.23deg, #895FC7 0%, #A064F9 100%);
 }

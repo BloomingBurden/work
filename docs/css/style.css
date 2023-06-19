@@ -1530,7 +1530,7 @@ button {
 }
 
 .discount-popup--closed {
-  bottom: 60px;
+  bottom: 150px;
 }
 
 .popup-item {
@@ -1538,7 +1538,7 @@ button {
   padding-right: 15px;
   overflow: hidden;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   width: 120px;
   height: 120px;
   border-radius: 15px;
@@ -1570,7 +1570,7 @@ button {
 
 .gift-popup {
   padding-top: 15px;
-  bottom: 20px;
+  bottom: 25px;
   left: 20px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1.51%, #A572F1), color-stop(96.67%, #732DDA));
   background: linear-gradient(180deg, #A572F1 1.51%, #732DDA 96.67%);
@@ -1613,7 +1613,7 @@ button {
 }
 
 .call-popup {
-  z-index: 999;
+  z-index: 998;
   position: fixed;
   right: 50px;
   bottom: 40px;
@@ -1651,6 +1651,110 @@ button {
 .call-popup__img {
   width: 60px;
   height: 60px;
+}
+
+.popup {
+  overflow: auto;
+  max-height: 100%;
+  border-radius: 30px;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  opacity: 1;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.popup img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.popup button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 999;
+  right: 20px;
+  top: 20px;
+  font-size: 0;
+  background-color: transparent;
+}
+
+.popup button::after,
+.popup button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: #000000;
+}
+
+.popup button::before {
+  top: 30px;
+  -webkit-transform: rotate(45deg) translateX(-50%);
+      -ms-transform: rotate(45deg) translateX(-50%);
+          transform: rotate(45deg) translateX(-50%);
+}
+
+.popup button::after {
+  top: 12px;
+  -webkit-transform: rotate(-45deg) translateX(-50%);
+      -ms-transform: rotate(-45deg) translateX(-50%);
+          transform: rotate(-45deg) translateX(-50%);
+}
+
+.popup--closed {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.popup-bottom {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.popup-bottom a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 14px 25px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.popup-bottom a:hover {
+  color: #213B72;
+}
+
+.popup-bottom__sign {
+  background: linear-gradient(90.23deg, #D6238D 0%, #FF9BD6 100%);
+}
+
+.popup-bottom__call {
+  background: linear-gradient(90.23deg, #895FC7 0%, #A064F9 100%);
 }
 
 .footer {
@@ -2313,8 +2417,8 @@ button {
   }
 
   .discount-popup {
-    left: 10px;
-    bottom: 80px;
+    left: 20px;
+    bottom: 150px;
   }
 
   .discount-popup h2 {
@@ -2322,39 +2426,55 @@ button {
   }
 
   .discount-popup--closed {
-    bottom: 20px;
+    bottom: 60px;
   }
 
   .popup-item {
-    width: auto;
-    height: auto;
-    background: transparent;
+    width: 80px;
+    height: 80px;
     padding: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
   }
 
-  .popup-item:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+  .popup-item a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .discount-popup__img {
+    margin-bottom: 0;
   }
 
   .gift-popup {
-    left: 25px;
-    bottom: 10px;
+    left: 20px;
+    bottom: 55px;
   }
 
   .gift-popup h2 {
     display: none;
   }
 
+  .gift-popup__img {
+    margin-bottom: 0;
+  }
+
   .call-popup {
     right: 30px;
-    bottom: 40px;
+    bottom: 55px;
   }
 
   .call-popup h2 {
     display: none;
+  }
+
+  .popup {
+    width: 80%;
+  }
+
+  .popup-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .footer {
@@ -2451,6 +2571,10 @@ button {
 
   .masters__item {
     min-height: 461px;
+  }
+
+  .popup {
+    width: 90%;
   }
 }
 
