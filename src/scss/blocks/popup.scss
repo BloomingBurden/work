@@ -172,62 +172,111 @@
 }
 
 .popup {
+  padding: 260px 30px 30px;
+  width: 594px;
+  height: 796px;
   overflow: auto;
   max-height: 100%;
   border-radius: 30px;
   transition: $trans;
   opacity: 1;
   position: fixed;
-  z-index: 999;
+  z-index: 9998;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 
   @media (max-width: $tableW) {
+    padding: 220px 10px 10px 10px;
     width: 80%;
+    height: 500px;
   }
 
   @media (max-width: 480px) {
     width: 90%;
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 594px;
+    height: 796px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('@img/discount.png');
+    background-position: center;
+    background-size: cover;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    @media (max-width: $tableW) {
+      width: 100%;
+      height: 500px;
+    }
   }
 
-  button {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
+  .sign__form {
+    width: 290px;
+
+    @media (max-width: $tableW) {
+      width: 170px;
+    }
+  }
+
+  .sign__item {
+    @media (max-width: $tableW) {
+      margin-bottom: 5px;
+      font-size: 12px;
+      padding: 15px;
+    }
+
+    &:last-of-type {
+      @media (max-width: $tableW) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .sign__send {
+    padding: 15px 20px;  
+    font-size: 12px;
+    
+    @media (max-width: $tableW) {
+      padding: 10px;
+    }
+  }
+}
+
+.popup__close {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 999;
+  right: 20px;
+  top: 20px;
+  font-size: 0;
+  background-color: transparent;
+
+  &::after,
+  &::before {
+    content: '';
     position: absolute;
-    z-index: 999;
-    right: 20px;
-    top: 20px;
-    font-size: 0;
-    background-color: transparent;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: #000000;
+  }
 
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      width: 50%;
-      height: 2px;
-      background-color: #000000;
-    }
+  &::before {
+    top: 30px;
+    transform: rotate(45deg) translateX(-50%);
+  }
 
-    &::before {
-      top: 30px;
-      transform: rotate(45deg) translateX(-50%);
-    }
-
-    &::after {
-      top: 12px;
-      transform: rotate(-45deg) translateX(-50%);
-    }
+  &::after {
+    top: 12px;
+    transform: rotate(-45deg) translateX(-50%);
   }
 }
 

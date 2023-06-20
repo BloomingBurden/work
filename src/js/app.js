@@ -58,5 +58,6 @@ window.addEventListener('load', (evt) => {
 
     setTimeout(() => {
         popup.classList.remove('popup--closed');
+        document.body.classList.add('no-scrolling');
     }, 10000)
 });

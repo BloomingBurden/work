@@ -17,7 +17,7 @@
   <header class="header">
     <div class="header__container container">
       <div class="header__logo logo">
-        <img src="img/logo.svg" alt="Логотип" width="135" height="87">
+        <img src="img/logo.png" alt="Логотип" width="135" height="87">
       </div>
 
       <nav class="header__nav nav">
@@ -58,9 +58,9 @@
         <h1 class="visually-hidden">Grushka - Сеть салонов красоты</h1>
         <div class="preview__inner">
           <h2 class="preview__title">Красота начинается с заботы о себе</h2>
-          <p class="preview__discount">50% скидка</p>
+          <p class="preview__discount">50% скидка на</p>
           <strong class="preview__subtitle">чистку + пилинг и биоревитализацию</strong>
-          <a href="#sign" class="preview__btn button">Оставить заявку</a>
+          <a href="#sign" class="preview__btn button">Получить бесплатную консультацию</a>
         </div>
       </div>
     </section>
@@ -74,7 +74,7 @@
             <div class="advantages__icon">
               <img src="img/icons/icons.svg#advantages-1-icon" alt="Изображение преимущества" width="70">
             </div>
-            <h3 class="advantages__subtitle">Врачи экспертного уровня</h3>
+            <h3 class="advantages__subtitle">Врачи - кандидаты медицинских наук</h3>
             <p class="advantages__text">Наши врачи - квалифицированные специалисты с большим стажем работы</p>
           </div>
           <div class="advantages__item">
@@ -103,14 +103,14 @@
               <img src="img/icons/icons.svg#advantages-5-icon" alt="Изображение преимущества" width="72" height="63">
             </div>
             <h3 class="advantages__subtitle">Работаем с 2010 г</h3>
-            <p class="advantages__text">Клиника Bestbody успешно работает с 2010 года</p>
+            <p class="advantages__text">Клиника успешно работает с 2010 года</p>
           </div>
           <div class="advantages__item">
             <div class="advantages__icon">
               <img src="img/icons/icons.svg#advantages-6-icon" alt="Изображение преимущества" width="70">
             </div>
             <h3 class="advantages__subtitle">Удобное расположение</h3>
-            <p class="advantages__text">Наша клиника находится в центре Москвы с удобным паркингом</p>
+            <p class="advantages__text">Наша клиника находится в Москва Сити, имеется подземный паркинг</p>
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@
               <h3 class="service__subtitle">Чистка + пилинг лица</h3>
               <p class="service__text">Главная задача чистки лица — вернуть коже здоровый вид. Это произойдёт после того, как будет восстановлено дыхание кожи, она освободится от жира и грязи, отмерших клеток</p>
               <p class="service__text">Чистка помогает избавиться от излишков кожного жира, загрязнений и ороговевших клеток. Пилинг же удаляет остатки мёртвых клеток, стимулирует обновление кожи и улучшает цвет лица.</p>
-              <a href="#sign" class="service__button button">Оставить заявку</a>
+              <a href="#sign" class="service__button button">Получить бесплатную консультацию</a>
             </div>
           </div>
 
@@ -250,7 +250,7 @@
               <h3 class="service__subtitle">Биоревитализация лица</h3>
               <p class="service__text">Биоревитализация лица — это процедура, которая заключается во введении в кожу специальных препаратов на основе гиалуроновой кислоты. Эти препараты помогают увлажнить кожу, стимулируют её обновление и улучшают цвет лица.</p>
               <p class="service__text">После процедуры вы заметите значительное улучшение состояния кожи: она станет более упругой, гладкой и свежей. Кроме того, такой уход помогает бороться с мелкими морщинками, пигментацией и другими проблемами кожи.</p>
-              <a href="#sign" class="service__button button">Оставить заявку</a>
+              <a href="#sign" class="service__button button">Получить бесплатную консультацию</a>
             </div>
           </div>
 
@@ -399,7 +399,7 @@
 
     <section class="masters" id="masters">
       <div class="masters__container container">
-        <h2 class="masters__title title">Наши мастера</h2>
+        <h2 class="masters__title title">Наши врачи</h2>
 
         <div class="masters__swiper swiper">
           <div class="masters__list swiper-wrapper">
@@ -438,8 +438,8 @@
     <section class="sign" id="sign">
       <div class="sign__container container">
         <div class="sign__inner">
-          <h2 class="sign__title title">Оставить заявку</h2>
-          <p class="sign__subtitle">Заполните форму и наш менеджер свяжется с вами в течении 5 минут</p>
+          <h2 class="sign__title title">Получить бесплатную консультацию</h2>
+          <p class="sign__subtitle">Заполните форму и мы свяжемся с вами в течении 5 минут</p>
 
           <form class="sign__form" action="" method="POST">
             <input class="sign__item sign-name" type="text" name="name" placeholder="Имя" required>
@@ -462,7 +462,11 @@
   </article>
 
   <article class="popup popup--closed">
-    <img src="img/discount.png" alt="Изображение попап">
+    <form class="sign__form" action="" method="POST">
+      <input class="sign__item sign-name" type="text" name="name" placeholder="Имя" required>
+      <input class="sign__item sign-phone" type="tel" name="phone" placeholder="Телефон" required>
+      <button class="sign__send button" type="submit">Получить подарок</button>
+    </form>
     <button class="popup__close" type="button">Закрыть меню</button>
   </article>
 

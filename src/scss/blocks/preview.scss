@@ -1,5 +1,5 @@
 .preview {
-  padding: 110px 0;
+  padding: 218px 0;
   min-height: 606px;
 
   color: #ffffff;
@@ -65,7 +65,7 @@
   font-weight: 500;
 
   @media (max-width: $desktopW) {
-    font-size: calcFluidFontSize(20, 16, 1200, 390);
+    font-size: calcFluidFontSize(20, 18, 1200, 390);
     margin-bottom: 35px;
   }
 }

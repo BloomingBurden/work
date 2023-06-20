@@ -57,11 +57,13 @@ const popupClick = () => {
     btn.addEventListener('click', (evt) => {
         evt.preventDefault();
 
+        document.body.classList.add('no-scrolling');
         popup.classList.remove('popup--closed');
     });
 
     closeBtn.addEventListener('click', (evt) => {
         popup.classList.add('popup--closed');
+        document.body.classList.remove('no-scrolling');
     })
 }
 

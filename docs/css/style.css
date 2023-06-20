@@ -477,6 +477,10 @@ body {
   word-break: break-word;
 }
 
+body.no-scrolling {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -587,6 +591,18 @@ button {
 .swiper-button-prev:hover,
 .swiper-button-prev:focus {
   border-color: #213B72;
+}
+
+.header {
+  position: fixed;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header__container {
@@ -729,7 +745,7 @@ button {
   background-image: url("../img/bg-main.png"), linear-gradient(101.45deg, rgba(6, 66, 193, 0.8) 9.23%, rgba(48, 97, 202, 0.8) 50.97%, rgba(58, 95, 173, 0.8) 84.12%); }
 
 .preview {
-  padding: 110px 0;
+  padding: 218px 0;
   min-height: 606px;
   color: #ffffff;
   background-repeat: no-repeat, no-repeat;
@@ -1435,6 +1451,7 @@ button {
 
 .sign__title {
   margin-bottom: 50px;
+  line-height: 1.1;
 }
 
 .sign__subtitle {
@@ -1641,6 +1658,9 @@ button {
 }
 
 .popup {
+  padding: 260px 30px 30px;
+  width: 594px;
+  height: 796px;
   overflow: auto;
   max-height: 100%;
   border-radius: 30px;
@@ -1648,7 +1668,7 @@ button {
   transition: 0.7s ease;
   opacity: 1;
   position: fixed;
-  z-index: 999;
+  z-index: 9998;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1656,14 +1676,33 @@ button {
           transform: translate(-50%, -50%);
 }
 
-.popup img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.no-webp .popup::after {
+  background-image: url("../img/discount.png"); }
+
+.popup::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 594px;
+  height: 796px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
 }
 
-.popup button {
+.popup .sign__form {
+  width: 290px;
+}
+
+.popup .sign__send {
+  padding: 15px 20px;
+  font-size: 12px;
+}
+
+.popup__close {
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -1675,8 +1714,8 @@ button {
   background-color: transparent;
 }
 
-.popup button::after,
-.popup button::before {
+.popup__close::after,
+.popup__close::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1685,14 +1724,14 @@ button {
   background-color: #000000;
 }
 
-.popup button::before {
+.popup__close::before {
   top: 30px;
   -webkit-transform: rotate(45deg) translateX(-50%);
       -ms-transform: rotate(45deg) translateX(-50%);
           transform: rotate(45deg) translateX(-50%);
 }
 
-.popup button::after {
+.popup__close::after {
   top: 12px;
   -webkit-transform: rotate(-45deg) translateX(-50%);
       -ms-transform: rotate(-45deg) translateX(-50%);
@@ -1885,7 +1924,7 @@ button {
   }
 
   .preview__subtitle {
-    font-size: calc( 0.0049382716 * 100vw + 14.0740740741px );
+    font-size: calc( 0.0024691358 * 100vw + 17.037037037px );
     margin-bottom: 35px;
   }
 
@@ -2466,7 +2505,32 @@ button {
   }
 
   .popup {
+    padding: 220px 10px 10px 10px;
     width: 80%;
+    height: 500px;
+  }
+
+  .popup::after {
+    width: 100%;
+    height: 500px;
+  }
+
+  .popup .sign__form {
+    width: 170px;
+  }
+
+  .popup .sign__item {
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .popup .sign__item:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  .popup .sign__send {
+    padding: 10px;
   }
 
   .popup-bottom {
@@ -2581,6 +2645,8 @@ button {
 .webp .discount__inner::after { background-image: url(../img/gift-bg.webp); }
 
 .webp .sign::after { background-image: url(../img/send-bg.webp); }
+
+.webp .popup::after { background-image: url(../img/discount.webp); }
 
 @media (max-width: 768px) {
 
