@@ -745,8 +745,8 @@ button {
   background-image: url("../img/bg-main.png"), linear-gradient(101.45deg, rgba(6, 66, 193, 0.8) 9.23%, rgba(48, 97, 202, 0.8) 50.97%, rgba(58, 95, 173, 0.8) 84.12%); }
 
 .preview {
-  padding: 218px 0;
-  min-height: 606px;
+  padding: 218px 0 60px;
+  min-height: 714px;
   color: #ffffff;
   background-repeat: no-repeat, no-repeat;
   background-position: 97% bottom, center;
@@ -2034,8 +2034,8 @@ button {
   .preview {
     background-position: center bottom, center;
     background-size: 510px, auto;
-    padding: 168px 0 60px;
-    min-height: 730px;
+    padding: 168px 0 30px;
+    min-height: 838px;
   }
 
   .preview__inner {
