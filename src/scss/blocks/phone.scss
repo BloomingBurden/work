@@ -4,6 +4,7 @@
   display: flex;
 
   @media (max-width: $tableW) {
+    align-items: center;
     flex: 1 1 auto;
     justify-content: flex-end;
   }
@@ -37,18 +38,11 @@
 }
 
 .phone__inner {
-  text-align: center;
-
+  text-align: center; 
+  
   @media (max-width: $tableW) {
-    transition: $trans;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    user-select: none;
-    right: 60px;
-    top: 0;
-    z-index: 9;
-    background-color: #ffffff;
+    order: -1;
+    padding-right: 15px;
   }
 }
 
@@ -63,6 +57,10 @@
   background-color: #213B72;
   border-radius: 50%;
   transition: $trans;
+
+  @media (max-width: $tableW) {
+    flex: 0 0 42px;
+  }
 
   &:hover,
   &:focus {
@@ -80,13 +78,5 @@
 
   @media (max-width: $tableW) {
     font-size: 14px;
-  }
-}
-
-@media (max-width: $tableW) {
-  .phone--active .phone__inner {
-    opacity: 1;
-    visibility: visible;
-    user-select: auto;
   }
 }

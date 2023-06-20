@@ -1911,10 +1911,6 @@ button {
     line-height: 30px;
   }
 
-  .preview {
-    padding: 80px 0;
-  }
-
   .preview__title {
     font-size: calc( 0.0271604938 * 100vw + 23.4074074074px );
   }
@@ -1999,6 +1995,9 @@ button {
   }
 
   .phone {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -2013,32 +2012,20 @@ button {
   }
 
   .phone__inner {
-    -webkit-transition: 0.7s ease;
-    transition: 0.7s ease;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    right: 60px;
-    top: 0;
-    z-index: 9;
-    background-color: #ffffff;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    padding-right: 15px;
+  }
+
+  .phone__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 42px;
+            flex: 0 0 42px;
   }
 
   .phone__time {
     font-size: 14px;
-  }
-
-  .phone--active .phone__inner {
-    opacity: 1;
-    visibility: visible;
-    -webkit-user-select: auto;
-       -moz-user-select: auto;
-        -ms-user-select: auto;
-            user-select: auto;
   }
 
   .no-webp .preview {
@@ -2047,7 +2034,7 @@ button {
   .preview {
     background-position: center bottom, center;
     background-size: 510px, auto;
-    padding: 60px 0;
+    padding: 168px 0 60px;
     min-height: 730px;
   }
 
